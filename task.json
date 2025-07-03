@@ -150,10 +150,64 @@
       "priority": "high",
       "dependencies": ["7", "8", "9", "10"],
       "details": "Final testing, bug fixes, and launch checklist completion"
+    },
+    {
+      "id": "16",
+      "title": "Domain Registration",
+      "description": "Register houseoperation.com domain name",
+      "status": "done",
+      "priority": "high",
+      "completed_date": "2025-01-03",
+      "details": "Domain houseoperation.com successfully registered and reserved by user"
+    },
+    {
+      "id": "17",
+      "title": "Deployment Script Creation",
+      "description": "Create comprehensive deployment script for server setup",
+      "status": "done",
+      "priority": "high",
+      "completed_date": "2025-01-03",
+      "details": "Created deploy.sh script with nginx setup, SSL configuration, firewall setup, and automatic website deployment. Script uploaded to GitHub repository."
+    },
+    {
+      "id": "18",
+      "title": "DNS Configuration",
+      "description": "Configure DNS A records to point domain to server IP",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": ["16"],
+      "details": "Need to set A records: houseoperation.com → 165.232.79.201 and www.houseoperation.com → 165.232.79.201"
+    },
+    {
+      "id": "19",
+      "title": "Server Deployment",
+      "description": "Deploy website to production server with SSL",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": ["17", "18"],
+      "details": "Run deployment script on server (165.232.79.201) to install nginx, configure SSL, and deploy website files. Instructions provided in DEPLOYMENT_INSTRUCTIONS.md"
+    },
+    {
+      "id": "20",
+      "title": "SSL Certificate Installation",
+      "description": "Install and configure Let's Encrypt SSL certificate",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": ["19"],
+      "details": "Automatic SSL certificate installation via Let's Encrypt with auto-renewal setup (included in deployment script)"
+    },
+    {
+      "id": "21",
+      "title": "Production Website Testing",
+      "description": "Test live website functionality and SSL configuration",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": ["20"],
+      "details": "Test https://houseoperation.com, verify SSL certificate, check all website functionality, and test contact form on production server"
     }
   ],
-  "completed_tasks": 7,
-  "total_tasks": 16,
-  "progress_percentage": 44,
+  "completed_tasks": 9,
+  "total_tasks": 21,
+  "progress_percentage": 43,
   "last_updated": "2025-01-03"
 } 
