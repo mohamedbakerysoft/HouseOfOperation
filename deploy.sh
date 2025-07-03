@@ -100,6 +100,9 @@ NGINX_CONF
     if [ -d "$WEB_DIR/.git" ]; then
         echo "📥 (Remote) Updating repository directly in website directory $WEB_DIR..."
         cd $WEB_DIR
+        # Fix Git ownership issues
+        git config --global --add safe.directory $WEB_DIR
+        chown -R root:root $WEB_DIR/.git
         git pull origin main
         echo "✅ (Remote) Repository updated successfully in website directory."
     else
@@ -107,6 +110,8 @@ NGINX_CONF
         rm -rf $WEB_DIR/*  # Clear any existing files
         git clone $GIT_REPO $WEB_DIR
         cd $WEB_DIR
+        # Fix Git ownership after cloning
+        git config --global --add safe.directory $WEB_DIR
         echo "✅ (Remote) Repository cloned successfully to website directory."
     fi
 
