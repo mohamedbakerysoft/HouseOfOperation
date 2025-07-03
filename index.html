@@ -14,7 +14,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="image.png" alt="House of Operation Management Logo" class="logo">
+                <img src="logo.svg" alt="House of Operation Management Logo" class="logo">
                 <span class="logo-text">House of Operation Management</span>
             </div>
             <div class="nav-menu">
@@ -84,7 +84,7 @@
         <div class="hero-container">
             <div class="hero-image-large">
                 <div class="hero-visual-enhanced">
-                    <img src="image.png" alt="House of Operation Management" class="hero-logo-large">
+                    <img src="logo.svg" alt="House of Operation Management" class="hero-logo-large">
                 </div>
             </div>
             <div class="hero-content-below">
@@ -210,14 +210,14 @@
                 </div>
                 <div class="swot-card opportunities">
                     <div class="swot-header">
-                        <i class="fas fa-rocket"></i>
+                        <i class="fas fa-lightbulb"></i>
                         <h3>Opportunities</h3>
                     </div>
                     <ul>
-                        <li>Surge in CRM adoption by developers</li>
-                        <li>Increasing number of developers relying on brokers</li>
-                        <li>Expansion across MENA (especially UAE, Saudi Arabia, Egypt)</li>
-                        <li>Potential for tech integration and automation services</li>
+                        <li>Growing real estate market needs operations expertise</li>
+                        <li>Developers looking to scale without hiring internal teams</li>
+                        <li>Technology improvements making outsourcing more efficient</li>
+                        <li>Potential for partnerships and referral networks</li>
                     </ul>
                 </div>
                 <div class="swot-card threats">
@@ -226,9 +226,10 @@
                         <h3>Threats</h3>
                     </div>
                     <ul>
-                        <li>Developers hesitant to outsource core operations</li>
-                        <li>Competition from internal operations teams or freelancers</li>
-                        <li>Industry regulations or tech limitations</li>
+                        <li>Established competitors with longer track records</li>
+                        <li>Economic downturns affecting real estate market</li>
+                        <li>Potential preference for in-house operations</li>
+                        <li>Client retention challenges in service industry</li>
                     </ul>
                 </div>
             </div>
@@ -239,22 +240,23 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2>Ready to Scale Your Operations?</h2>
-                <p>Let's discuss how we can help your real estate development business grow</p>
+                <h2>Get Started Today</h2>
+                <p>Ready to transform your real estate operations?</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
+                    <h3>Contact Information</h3>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <span>info@houseofoperation.com</span>
+                        <span>info@houseoperation.com</span>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
-                        <span>+20 100 697 1810</span>
+                        <span>+201006971810</span>
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-whatsapp"></i>
-                        <span>WhatsApp: +20 100 697 1810</span>
+                        <a href="https://wa.me/201006971810?text=Hello%2C%20I%27m%20interested%20in%20your%20real%20estate%20operations%20services" target="_blank">WhatsApp: +201006971810</a>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
@@ -262,20 +264,21 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form>
+                    <h3>Send us a Message</h3>
+                    <form id="contactForm">
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Company Name">
+                            <input type="text" id="company" name="company" placeholder="Company Name">
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Tell us about your project" rows="4"></textarea>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your operations needs" required></textarea>
                         </div>
-                        <button type="submit" class="btn-primary">Send Message</button>
+                        <button type="submit" class="submit-btn">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -286,24 +289,55 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="image.png" alt="House of Operation Management">
-                    <span>House of Operation Management</span>
+                <div class="footer-section">
+                    <h3>House of Operation Management</h3>
+                    <p>Your trusted partner in real estate operations outsourcing.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
                 </div>
-                <div class="footer-text">
-                    <p>&copy; 2024 House of Operation Management. All rights reserved.</p>
-                    <p>Empowering real estate developers through operational excellence.</p>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">CRM Management</a></li>
+                        <li><a href="#">Broker Coordination</a></li>
+                        <li><a href="#">Sales Operations</a></li>
+                        <li><a href="#">Contract Management</a></li>
+                        <li><a href="#">Workflow Optimization</a></li>
+                    </ul>
                 </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Ready to get started?</p>
+                    <p>Email: info@houseoperation.com</p>
+                    <p>Phone: +201006971810</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 House of Operation Management. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/201006971810?text=Hello%2C%20I%27m%20interested%20in%20your%20real%20estate%20operations%20services" 
-       class="floating-whatsapp" target="_blank" aria-label="Contact us on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <div class="whatsapp-float">
+        <a href="https://wa.me/201006971810?text=Hello%2C%20I%27m%20interested%20in%20your%20real%20estate%20operations%20services" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
 
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
