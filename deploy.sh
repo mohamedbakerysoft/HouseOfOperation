@@ -108,12 +108,10 @@ NGINX_CONF
         git config --global user.name "House of Operation Deployment"
         # Configure Git pull strategy to avoid divergent branch issues
         git config pull.rebase false
-        # Stash any local changes to avoid conflicts
-        echo "🔄 (Remote) Stashing any local changes..."
-        git stash --include-untracked || true
-        # Reset to clean state and pull latest changes
-        git reset --hard HEAD
-        git pull origin main --allow-unrelated-histories
+        # Force clean state and overwrite with remote
+        echo "🔄 (Remote) Forcing clean state and overwriting with latest..."
+        git fetch origin main
+        git reset --hard origin/main
         echo "✅ (Remote) Repository updated successfully in website directory."
     else
         echo "📥 (Remote) Cloning repository directly to website directory $WEB_DIR..."
