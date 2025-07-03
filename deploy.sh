@@ -103,6 +103,11 @@ NGINX_CONF
         # Fix Git ownership issues
         git config --global --add safe.directory $WEB_DIR
         chown -R root:root $WEB_DIR/.git
+        # Stash any local changes to avoid conflicts
+        echo "🔄 (Remote) Stashing any local changes..."
+        git stash --include-untracked || true
+        # Reset to clean state and pull latest changes
+        git reset --hard HEAD
         git pull origin main
         echo "✅ (Remote) Repository updated successfully in website directory."
     else
