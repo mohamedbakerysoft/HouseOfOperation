@@ -110,7 +110,7 @@ NGINX_CONF
         git stash --include-untracked || true
         # Reset to clean state and pull latest changes
         git reset --hard HEAD
-        git pull origin main
+        git pull origin main --allow-unrelated-histories
         echo "✅ (Remote) Repository updated successfully in website directory."
     else
         echo "📥 (Remote) Cloning repository directly to website directory $WEB_DIR..."
