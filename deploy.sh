@@ -111,6 +111,12 @@ NGINX_CONF
     # --- Website Files Deployment ---
     echo "📋 (Remote) Copying website files to $WEB_DIR..."
     cp index.html styles.css script.js task.json README.md image.png ceo-huda-mahdy.jpg $WEB_DIR/
+    
+    # Copy imgs directory if it exists
+    if [ -d "imgs" ]; then
+        echo "📁 (Remote) Copying imgs directory..."
+        cp -r imgs $WEB_DIR/
+    fi
 
     echo "✅ (Remote) Logo file (image.png) has been deployed successfully."
     
