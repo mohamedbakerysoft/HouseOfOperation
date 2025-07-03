@@ -1,3 +1,25 @@
+/* Logo Color Theme Variables */
+:root {
+    /* Primary Logo Colors */
+    --logo-blue-primary: #2c5282;
+    --logo-blue-dark: #1a365d;
+    --logo-blue-light: #4299e1;
+    --logo-blue-lighter: #e6f3ff;
+    
+    /* Logo Gold/Accent Colors */
+    --logo-gold-primary: #ffd700;
+    --logo-gold-dark: #d69e2e;
+    --logo-gold-light: #faf089;
+    --logo-gold-lighter: #fffbeb;
+    
+    /* Neutral Colors */
+    --text-primary: #2d3748;
+    --text-secondary: #4a5568;
+    --text-light: #718096;
+    --white: #ffffff;
+    --gray-light: #f7fafc;
+}
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -8,8 +30,8 @@
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #ffffff;
+    color: var(--text-primary);
+    background-color: var(--white);
 }
 
 .container {
@@ -20,8 +42,8 @@ body {
 
 /* Navigation */
 .navbar {
-    background: #ffffff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(44, 82, 130, 0.15);
     position: fixed;
     width: 100%;
     top: 0;
@@ -52,7 +74,7 @@ body {
 .logo-text {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #2c5282;
+    color: var(--logo-blue-primary);
 }
 
 .nav-menu {
@@ -63,34 +85,37 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: #4a5568;
+    color: var(--text-secondary);
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #2c5282;
+    color: var(--logo-blue-primary);
 }
 
 .cta-button {
-    background: #2c5282;
-    color: white;
+    background: var(--logo-blue-primary);
+    color: var(--white);
     padding: 10px 20px;
     border: none;
     border-radius: 6px;
     font-weight: 500;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(44, 82, 130, 0.2);
 }
 
 .cta-button:hover {
-    background: #2a4a7a;
+    background: var(--logo-blue-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(44, 82, 130, 0.3);
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: linear-gradient(135deg, var(--logo-blue-light) 0%, var(--logo-blue-primary) 50%, var(--logo-blue-dark) 100%);
+    color: var(--white);
     padding: 120px 0 80px;
     margin-top: 70px;
 }
@@ -143,8 +168,8 @@ body {
 }
 
 .highlight {
-    color: #ffd700;
-    background: linear-gradient(45deg, #ffd700, #ffed4a);
+    color: var(--logo-gold-primary);
+    background: linear-gradient(45deg, var(--logo-gold-primary), var(--logo-gold-light));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -168,26 +193,28 @@ body {
 }
 
 .btn-primary {
-    background: #ffd700;
-    color: #2c5282;
+    background: var(--logo-gold-primary);
+    color: var(--logo-blue-primary);
     padding: 15px 30px;
     border: none;
     border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
 }
 
 .btn-primary:hover {
-    background: #ffed4a;
+    background: var(--logo-gold-light);
     transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
 }
 
 .btn-secondary {
     background: transparent;
-    color: white;
+    color: var(--white);
     padding: 15px 30px;
-    border: 2px solid white;
+    border: 2px solid var(--white);
     border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
@@ -195,8 +222,9 @@ body {
 }
 
 .btn-secondary:hover {
-    background: white;
-    color: #2c5282;
+    background: var(--white);
+    color: var(--logo-blue-primary);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 }
 
 
@@ -204,7 +232,7 @@ body {
 /* CEO Spotlight - Modern Design */
 .ceo-spotlight {
     padding: 100px 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    background: linear-gradient(135deg, var(--logo-blue-light) 0%, var(--logo-blue-primary) 50%, var(--logo-blue-dark) 100%);
     position: relative;
     overflow: hidden;
 }
@@ -284,7 +312,7 @@ body {
 }
 
 .ceo-quick-info p {
-    color: #ffd700;
+    color: var(--logo-gold-primary);
     font-size: 1.2rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -311,7 +339,7 @@ body {
 .ceo-name-highlight {
     font-size: 2.2rem;
     font-weight: 800;
-    background: linear-gradient(135deg, #2c5282 0%, #667eea 50%, #764ba2 100%);
+    background: linear-gradient(135deg, var(--logo-blue-primary) 0%, var(--logo-blue-light) 50%, var(--logo-blue-dark) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -323,7 +351,7 @@ body {
 .ceo-position-highlight {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #667eea;
+    color: var(--logo-blue-light);
     margin-bottom: 12px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -334,10 +362,10 @@ body {
 .ceo-title-accent {
     width: 80px;
     height: 3px;
-    background: linear-gradient(90deg, #667eea 0%, #f093fb 50%, #667eea 100%);
+    background: linear-gradient(90deg, var(--logo-blue-light) 0%, var(--logo-gold-primary) 50%, var(--logo-blue-light) 100%);
     margin: 0 auto;
     border-radius: 2px;
-    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 2px 8px rgba(44, 82, 130, 0.3);
     animation: accentGlow 3s ease-in-out infinite alternate;
 }
 
@@ -362,7 +390,7 @@ body {
 .accent-line {
     width: 80px;
     height: 4px;
-    background: linear-gradient(90deg, #ffd700, #ff6b6b);
+    background: linear-gradient(90deg, var(--logo-gold-primary), var(--logo-gold-light));
     border-radius: 2px;
     margin-bottom: 30px;
 }
@@ -380,7 +408,7 @@ body {
 }
 
 .ceo-summary strong {
-    color: #ffd700;
+    color: var(--logo-gold-primary);
     font-weight: 700;
 }
 
@@ -429,19 +457,19 @@ body {
 .section-header h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #2c5282;
+    color: var(--logo-blue-primary);
     margin-bottom: 15px;
 }
 
 .section-header p {
     font-size: 1.2rem;
-    color: #6b7280;
+    color: var(--text-light);
 }
 
 /* Mission & Vision */
 .mission-vision {
     padding: 80px 0;
-    background: #f8fafc;
+    background: var(--logo-blue-lighter);
 }
 
 .mission-vision-grid {
@@ -451,19 +479,22 @@ body {
 }
 
 .mission-card, .vision-card {
-    background: white;
+    background: var(--white);
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 20px rgba(44, 82, 130, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(44, 82, 130, 0.1);
 }
 
 .mission-card:hover, .vision-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(44, 82, 130, 0.15);
+    border-color: var(--logo-blue-light);
 }
 
 .card-icon {
-    background: #e6f3ff;
+    background: var(--logo-blue-lighter);
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -471,17 +502,18 @@ body {
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    border: 2px solid var(--logo-blue-light);
 }
 
 .card-icon i {
-    color: #2c5282;
+    color: var(--logo-blue-primary);
     font-size: 1.5rem;
 }
 
 .mission-card h3, .vision-card h3 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #2c5282;
+    color: var(--logo-blue-primary);
     margin-bottom: 15px;
 }
 
@@ -497,20 +529,21 @@ body {
 }
 
 .service-card {
-    background: white;
+    background: var(--white);
     padding: 30px;
     border-radius: 12px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid rgba(44, 82, 130, 0.1);
     transition: all 0.3s ease;
 }
 
 .service-card:hover {
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 30px rgba(44, 82, 130, 0.15);
     transform: translateY(-3px);
+    border-color: var(--logo-gold-primary);
 }
 
 .service-icon {
-    background: #2c5282;
+    background: linear-gradient(135deg, var(--logo-blue-primary), var(--logo-blue-light));
     width: 50px;
     height: 50px;
     border-radius: 8px;
@@ -518,29 +551,30 @@ body {
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(44, 82, 130, 0.2);
 }
 
 .service-icon i {
-    color: white;
+    color: var(--white);
     font-size: 1.2rem;
 }
 
 .service-card h3 {
     font-size: 1.3rem;
     font-weight: 600;
-    color: #2c5282;
+    color: var(--logo-blue-primary);
     margin-bottom: 15px;
 }
 
 .service-card p {
-    color: #6b7280;
+    color: var(--text-light);
     line-height: 1.6;
 }
 
 /* SWOT Analysis */
 .swot-analysis {
     padding: 80px 0;
-    background: #f8fafc;
+    background: var(--logo-blue-lighter);
 }
 
 .swot-grid {
@@ -550,26 +584,28 @@ body {
 }
 
 .swot-card {
-    background: white;
+    background: var(--white);
     padding: 30px;
     border-radius: 12px;
     border-left: 4px solid;
+    box-shadow: 0 4px 15px rgba(44, 82, 130, 0.1);
+    transition: all 0.3s ease;
 }
 
 .swot-card.strengths {
-    border-left-color: #10b981;
+    border-left-color: var(--logo-blue-primary);
 }
 
 .swot-card.weaknesses {
-    border-left-color: #f59e0b;
+    border-left-color: var(--logo-gold-dark);
 }
 
 .swot-card.opportunities {
-    border-left-color: #3b82f6;
+    border-left-color: var(--logo-blue-light);
 }
 
 .swot-card.threats {
-    border-left-color: #ef4444;
+    border-left-color: var(--logo-blue-dark);
 }
 
 .swot-header {
@@ -584,25 +620,25 @@ body {
 }
 
 .strengths .swot-header i {
-    color: #10b981;
+    color: var(--logo-blue-primary);
 }
 
 .weaknesses .swot-header i {
-    color: #f59e0b;
+    color: var(--logo-gold-dark);
 }
 
 .opportunities .swot-header i {
-    color: #3b82f6;
+    color: var(--logo-blue-light);
 }
 
 .threats .swot-header i {
-    color: #ef4444;
+    color: var(--logo-blue-dark);
 }
 
 .swot-header h3 {
     font-size: 1.3rem;
     font-weight: 600;
-    color: #2c5282;
+    color: var(--logo-blue-primary);
 }
 
 .swot-card ul {
@@ -611,7 +647,7 @@ body {
 
 .swot-card li {
     padding: 8px 0;
-    color: #6b7280;
+    color: var(--text-light);
     position: relative;
     padding-left: 20px;
 }
@@ -627,16 +663,16 @@ body {
 /* Contact Section */
 .contact {
     padding: 80px 0;
-    background: #2c5282;
-    color: white;
+    background: var(--logo-blue-primary);
+    color: var(--white);
 }
 
 .contact .section-header h2 {
-    color: white;
+    color: var(--white);
 }
 
 .contact .section-header p {
-    color: #e2e8f0;
+    color: var(--logo-blue-lighter);
 }
 
 .contact-content {
@@ -654,15 +690,16 @@ body {
 }
 
 .contact-item i {
-    color: #ffd700;
+    color: var(--logo-gold-primary);
     font-size: 1.2rem;
 }
 
 .contact-form {
-    background: white;
+    background: var(--white);
     padding: 40px;
     border-radius: 12px;
-    color: #333;
+    color: var(--text-primary);
+    box-shadow: 0 8px 25px rgba(44, 82, 130, 0.3);
 }
 
 .form-group {
@@ -673,22 +710,42 @@ body {
 .form-group textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #d1d5db;
+    border: 1px solid rgba(44, 82, 130, 0.2);
     border-radius: 8px;
     font-size: 1rem;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #2c5282;
+    border-color: var(--logo-blue-primary);
+    box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.1);
+}
+
+.btn-submit {
+    background: var(--logo-blue-primary);
+    color: var(--white);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.btn-submit:hover {
+    background: var(--logo-blue-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(44, 82, 130, 0.3);
 }
 
 /* Footer */
 .footer {
-    background: #1a202c;
-    color: white;
+    background: var(--logo-blue-dark);
+    color: var(--white);
     padding: 40px 0;
     text-align: center;
 }
@@ -713,7 +770,7 @@ body {
 
 .footer-text p {
     margin-bottom: 5px;
-    color: #a0aec0;
+    color: var(--logo-blue-lighter);
 }
 
 /* Responsive Design */
