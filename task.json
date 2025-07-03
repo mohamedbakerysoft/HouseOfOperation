@@ -223,10 +223,20 @@
       "completed_date": "2025-01-03",
       "dependencies": ["22"],
       "details": "Modernized CEO section with: large professional photo (500px max-width) with hover effects and overlay, gradient background with backdrop blur effects, summarized executive content for better readability, modern credential badges with glass morphism styling, prominent CEO title highlighting 'Huda Mahdy - CEO of House of Operation Management' under photo, improved responsive design for mobile devices, updated CEO image to latest professional photo (ceo.png)"
+    },
+    {
+      "id": "24",
+      "title": "Enhanced Hero Section & Deployment Optimization",
+      "description": "Redesign hero section with large centered image and text below, optimize deployment script",
+      "status": "done",
+      "priority": "high",
+      "completed_date": "2025-01-03",
+      "dependencies": ["23"],
+      "details": "Enhanced hero section: large centered logo (500px max-width) with hover effects and drop shadows, repositioned text content below image for better visual hierarchy, improved responsive design for mobile devices. Optimized deployment script to pull changes directly into website directory (/var/www/houseoperation.com) instead of copying files, eliminating intermediate steps and ensuring all repository files are properly deployed. Optimized CEO image size: 900px max-width with 550px minimum height for balanced prominence, 85% width on mobile, 1.8fr grid column allocation, 3:4 aspect ratio. Removed separate title section and integrated CEO caption directly on image with always-visible overlay: enhanced text styling (2.5rem name, 1.2rem position in gold), improved shadow effects, responsive mobile sizing (2rem/1rem)."
     }
   ],
-  "completed_tasks": 11,
-  "total_tasks": 23,
-  "progress_percentage": 48,
+  "completed_tasks": 12,
+  "total_tasks": 24,
+  "progress_percentage": 50,
   "last_updated": "2025-01-03"
 } 

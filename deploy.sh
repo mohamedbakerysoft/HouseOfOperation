@@ -94,31 +94,24 @@ NGINX_CONF
     systemctl enable nginx
     systemctl restart nginx
 
-    # --- Git Repository Handling ---
+    # --- Git Repository Handling - Direct to Website Directory ---
     GIT_REPO="https://github.com/mohamedbakerysoft/HouseOfOperation.git"
-    SRC_DIR="/usr/local/src/HouseOfOperation"
 
-    if [ -d "$SRC_DIR" ]; then
-        echo "📥 (Remote) Updating repository in $SRC_DIR..."
-        cd $SRC_DIR
-        git pull
+    if [ -d "$WEB_DIR/.git" ]; then
+        echo "📥 (Remote) Updating repository directly in website directory $WEB_DIR..."
+        cd $WEB_DIR
+        git pull origin main
+        echo "✅ (Remote) Repository updated successfully in website directory."
     else
-        echo "📥 (Remote) Cloning repository to $SRC_DIR..."
-        git clone $GIT_REPO $SRC_DIR
-        cd $SRC_DIR
+        echo "📥 (Remote) Cloning repository directly to website directory $WEB_DIR..."
+        rm -rf $WEB_DIR/*  # Clear any existing files
+        git clone $GIT_REPO $WEB_DIR
+        cd $WEB_DIR
+        echo "✅ (Remote) Repository cloned successfully to website directory."
     fi
 
-    # --- Website Files Deployment ---
-    echo "📋 (Remote) Copying website files to $WEB_DIR..."
-    cp index.html styles.css script.js task.json README.md image.png ceo-huda-mahdy.jpg $WEB_DIR/
-    
-    # Copy imgs directory if it exists
-    if [ -d "imgs" ]; then
-        echo "📁 (Remote) Copying imgs directory..."
-        cp -r imgs $WEB_DIR/
-    fi
-
-    echo "✅ (Remote) Logo file (image.png) has been deployed successfully."
+    echo "📋 (Remote) All website files are now up-to-date from GitHub repository."
+    echo "✅ (Remote) Website deployment completed - files pulled directly from repository."
     
     chown -R www-data:www-data $WEB_DIR
 
