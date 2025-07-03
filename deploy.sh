@@ -103,6 +103,9 @@ NGINX_CONF
         # Fix Git ownership issues
         git config --global --add safe.directory $WEB_DIR
         chown -R root:root $WEB_DIR/.git
+        # Configure Git user identity
+        git config --global user.email "deployment@houseoperation.com"
+        git config --global user.name "House of Operation Deployment"
         # Configure Git pull strategy to avoid divergent branch issues
         git config pull.rebase false
         # Stash any local changes to avoid conflicts
@@ -119,6 +122,9 @@ NGINX_CONF
         cd $WEB_DIR
         # Fix Git ownership after cloning
         git config --global --add safe.directory $WEB_DIR
+        # Configure Git user identity
+        git config --global user.email "deployment@houseoperation.com"
+        git config --global user.name "House of Operation Deployment"
         # Configure Git pull strategy for future pulls
         git config pull.rebase false
         echo "✅ (Remote) Repository cloned successfully to website directory."
