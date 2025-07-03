@@ -22,12 +22,8 @@ ssh -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes root@165.232.79.201 'bash -s' << 
     echo "✅ (Remote) Connection successful. Starting deployment process..."
     echo "================================================================="
 
-    # --- System Setup ---
-    echo "📦 (Remote) Updating system packages..."
-    apt update && apt upgrade -y
 
-    echo "📦 (Remote) Installing required packages (nginx, certbot, git)..."
-    apt install -y nginx certbot python3-certbot-nginx ufw git curl
+
 
     # --- Web Directory Setup ---
     WEB_DIR="/var/www/houseoperation.com"
@@ -114,9 +110,9 @@ NGINX_CONF
 
     # --- Website Files Deployment ---
     echo "📋 (Remote) Copying website files to $WEB_DIR..."
-    cp index.html styles.css script.js task.json README.md $WEB_DIR/
+    cp index.html styles.css script.js task.json README.md image.png ceo-huda-mahdy.jpg $WEB_DIR/
 
-    echo "⚠️  (Remote) Note: Logo file (image.png) needs to be in the repository to be deployed."
+    echo "✅ (Remote) Logo file (image.png) has been deployed successfully."
     
     chown -R www-data:www-data $WEB_DIR
 

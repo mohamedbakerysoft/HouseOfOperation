@@ -169,6 +169,104 @@ body {
     filter: brightness(1.1);
 }
 
+/* CEO Spotlight */
+.ceo-spotlight {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.ceo-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.ceo-image {
+    text-align: center;
+}
+
+.ceo-photo {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.ceo-photo:hover {
+    transform: translateY(-5px);
+}
+
+.ceo-header h2 {
+    font-size: 2.2rem;
+    color: #2c5282;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.ceo-header h3 {
+    font-size: 2rem;
+    color: #1a365d;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.ceo-title {
+    font-size: 1.1rem;
+    color: #667eea;
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.ceo-description {
+    margin-bottom: 30px;
+}
+
+.ceo-description p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4a5568;
+    margin-bottom: 20px;
+}
+
+.ceo-credentials {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.credential-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.credential-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.credential-item i {
+    color: #667eea;
+    font-size: 1.2rem;
+    width: 20px;
+    text-align: center;
+}
+
+.credential-item span {
+    font-weight: 500;
+    color: #2d3748;
+}
+
 /* Section Headers */
 .section-header {
     text-align: center;
@@ -499,6 +597,24 @@ body {
     .hero-buttons {
         flex-direction: column;
         align-items: center;
+    }
+
+    .ceo-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .ceo-photo {
+        max-width: 300px;
+    }
+
+    .ceo-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .ceo-header h3 {
+        font-size: 1.6rem;
     }
 }
 
